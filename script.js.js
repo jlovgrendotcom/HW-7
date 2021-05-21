@@ -1,10 +1,10 @@
 
 let trailsArray = [];
 
-let trailsObject = function (pTrail, pCity, pComment, pRating) {
+let trailsObject = function (pTrail, pCity, pDifficulty, pRating) {
     this.Trail = pTrail;
     this.City = pCity;
-    this.Comment = pComment;
+    this.Difficulty = pDifficulty;
     this.Rating = pRating;
 }
 
@@ -16,13 +16,13 @@ document.addEventListener("DOMContentLoaded", function () {
 
     document.getElementById("buttonAdd").addEventListener("click", function () {
       trailsArray.push(new trailsObject(document.getElementById("trailname").value, 
-      document.getElementById("closestcity").value, document.getElementById("generalcomments").value,document.getElementById("colors").value ));
+      document.getElementById("closestcity").value, document.getElementById("difficulty").value,document.getElementById("ratings").value ));
     });
 
     document.getElementById("buttonClear").addEventListener("click", function () {
       document.getElementById("trailname").value = "";
       document.getElementById("closestcity").value = "";
-      document.getElementById("generalcomments").value = "";
+      document.getElementById("difficulty").value = "";
       document.getElementById("ratings").value = "";
     });
 
@@ -35,8 +35,8 @@ document.addEventListener("DOMContentLoaded", function () {
       trailsArray.sort(dynamicSort("City"));
       createList();
   });
-    document.getElementById("buttonSortComment").addEventListener("click", function () {
-      trailsArray.sort(dynamicSort("Comment"));
+    document.getElementById("buttonSortDifficulty").addEventListener("click", function () {
+      trailsArray.sort(dynamicSort("difficulty"));
       createList();
   });
     document.getElementById("buttonSortRating").addEventListener("click", function () {
@@ -59,7 +59,7 @@ function createList() {
 
     trailsArray.forEach(function (element,) {   
         var li = document.createElement('li');
-        li.innerHTML =  element.Trail + ":  " + element.City+ ":  " + element.Comment+ ":  " + element.Rating;
+        li.innerHTML =  element.Trail + ":  " + element.City+ ":  " + element.Difficulty+ ":  " + element.Rating;
         theList.appendChild(li);
     });
 
