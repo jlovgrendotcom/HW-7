@@ -26,7 +26,7 @@
           <div data-role="navbar" data-theme='b'>
             <ul>
                 <li><a href="#add">Add Trail</a></li>
-                <li><a href="#list">List Rating</a></li>
+                <li><a href="#list">Trails and Ratings</a></li>
             </ul>
           </div><!-- navbar -->
 
@@ -36,7 +36,7 @@
         <div data-role="main" data-theme='a'> 
           <div class="newFont" id="home1">
             <img src="images/hikinglogo.png" alt="Hiking" id="hikinglogohome">
-              <h1 id="favoritehikes">My Favorite Trails</h1>
+              <h1 id="favoritehikes">Washington State's Best Trail Rater</h1>
           </div>
         </div>
         
@@ -74,17 +74,37 @@
           <h2 id="TrailsTitle">Please share your favorite trails</h2>
           Hiking Trail Name <br />
           <input type="text" value="" id="trailname" />
-          Closest City <br />
-          <input type="text" value="" id="closestcity" />
-          General Comments <br />
-          <input type="text" value="" id="generalcomments" />
+           
+           <label for="city">Closest City :</label>
+           <select name="city" id="closestcity">
+             <option value="Bellingham"><span>Bellingham</span></option>
+             <option value="Mount Vernon"><span>Mount Vernon</span></option>
+             <option value="Seattle"><span>Seattle</span></option>
+             <option value="Olympia"><span>Olympia</span></option>
+             <option value="Centrailia"><span>Centrailia</span></option>
+             <option value="Vancouver"><span>Vancouver</span></option>
+             <option value="Richland"><span>Richland</span></option>
+             <option value="Yakima"><span>Yakima</span></option>
+             <option value=" Moses Lake"><span> Moses Lake</span></option>
+             <option value="East Wenatchee Beach"><span>East Wenatchee Beach</span></option>
+             <option value="Omak"><span>Omak</span></option>
+             <option value="Kettle Falls"><span>Kettle Falls</span></option>
+             <option value="Newport"><span>Newport</span></option>
+           </select> 
+          <label for="traildiff">Difficulty </label>
+          <select name ="traildiff" id = "difficulty"/>
+          <option value="Easy"><span>Easy</span></option>
+          <option value="Medium"><span>Medium</span></option>
+          <option value="Hard"><span>Hard</span></option>
+          <option value="Extreme"><span>Extreme</span></option>
+          </select>
       <label for="trailrating">Choose a Rating:</label>
   <select name="trailrating" id="ratings">
-    <option value="1"><span>☆</span></option>
-    <option value="2"><span>☆</span><span>☆</span></option>
-    <option value="3"><span>☆</span><span>☆</span><span>☆</span></option>
-    <option value="4"><span>☆</span><span>☆</span><span>☆</span><span>☆</span></option>
-    <option value="5"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></option>
+    <option value="1 star"><span>☆</span></option>
+    <option value="2 star"><span>☆</span><span>☆</span></option>
+    <option value="3 star"><span>☆</span><span>☆</span><span>☆</span></option>
+    <option value="4 star"><span>☆</span><span>☆</span><span>☆</span><span>☆</span></option>
+    <option value="5 star"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></option>
   </select>
 
   <br><br>
@@ -116,6 +136,7 @@
         <ul>
           <li><a href="#home">Home Page</a></li>
           <li><a href="#add">Add Trail</a></li>
+          <li><a href="#map">Map View</a></li>
         </ul>
       </div><!-- /navbar -->
 
@@ -129,7 +150,7 @@
       <ul id="myul"></ul>
       <input type="button" value="Sort By Trail Name" id="buttonSortTrail" data-inline="true" />
       <input type="button" value="Sort By Closest City" id="buttonSortCity" data-inline="true" />
-      <input type="button" value="Sort By Comments" id="buttonSortComment" data-inline="true" />
+      <input type="button" value="Sort By Difficulty" id="buttonSortDifficulty" data-inline="true" />
       <input type="button" value="Sort By Rating" id="buttonSortRating" data-inline="true" />
     </div>
 
@@ -140,8 +161,80 @@
           </div>
  
     </div>
+    <!------------------------------------------->
+ <!------------Page4:MAP---------------->
+<div data-role="page" id = "map">
 
+<!--  page header -->
+    <div data-role="header" data-theme='c'>
+      <h2 id="Header">Hiking Trails Northwest</h2>
+      <br>
+      <h2 id="Header2">MAP VIEW</h2>
+      <img src="images/hikinglogo.png" alt="Hiking" id="hikinglogo">
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#add">Add Trail</a></li>
+          <li><a href="#list">Trails and Ratings</a></li>
+          <li><a href="#mapresults">Map Results</a></li>
+        </ul>
+      </div><!-- /navbar -->
+  </div>
+
+<!--   page content -->
+
+ <div data-role="content" data-theme='e'>
+      <img src="images/hikingsign.png" alt="hiking sign" id="hikingsign">
+ <div>
+
+
+        <img src = "map.jpg" alt = "WACityMap" usemap="#citymap" id = "map" >
+    <map name = "citymap">
+     
+  <area shape="circle" coords="60,126,44" alt="portangeles" href="#mapresults">
+  <area shape="circle" coords="236,40,44" alt="bellingham" href="#mapresults">
+  <area shape="circle" coords="239,83,44" alt="mount vernon" href="#mapresults">
+  <area shape="circle" coords="235,194,44" alt="seattle" href="#mapresults">
+  <area shape="circle" coords="169,264,44" alt="olympia" href="#mapresults">
+  <area shape="circle" coords="159,330,44" alt="centralia" href="#mapresults">
+  <area shape="circle" coords="182,447,44" alt="vancouver" href="#mapresults">
+  <area shape="circle" coords="510,394,44" alt="richland" href="#mapresults">
+  <area shape="circle" coords="394,334,44" alt="yakima" href="#mapresults">
+  <area shape="circle" coords="523,283,44" alt="moses-lake" href="#mapresults">
+  <area shape="circle" coords="432,241,44" alt="east-wenatchee-beach" href="#mapresults">
+  <area shape="circle" coords="481,105,44" alt="omak" href="#mapresults">
+  <area shape="circle" coords="663,68,44" alt="kettle-falls" href="#mapresults">
+  <area shape="circle" coords="733,151,44" alt="newport" href="#mapresults">
+</map>
+ </div>
+ </div>
+</div>
+
+   <!------------------------------------------->
+ <!------------Page5:MAP SELECTED TRAILS---------------->
+   <div data-role="page" id = "mapresults">
+
+<!--  page header -->
+    <div data-role="header" data-theme='c'>
+      <h2 id="Header">Hiking Trails Northwest</h2>
+      <br>
+      <h2 id="Header2">MAP RESULTS</h2>
+      <img src="images/hikinglogo.png" alt="Hiking" id="hikinglogo">
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#add">Add Trail</a></li>
+          <li><a href="#list">Trails and Ratings</a></li>
+        </ul>
+      </div><!-- /navbar -->
+  
+    <!--   page content -->
  <script type="text/javascript" src="script.js"></script>
-   
+ <div data-role="content" data-theme='e'>
+      <img src="images/hikingsign.png" alt="hiking sign" id="hikingsign">
+  <input type="button" value="Show Results" id="showResults" data-inline="true" />   
+ </div>
+    </div>
+
 </body>
 </html>
