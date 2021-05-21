@@ -1,0 +1,147 @@
+<!doctype html>
+<html>
+<head>
+    <title>Hiking Trails Northwest</title>
+
+    <link href='https://fonts.googleapis.com/css?family=canvas-print' rel='stylesheet'>
+
+    <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+    <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+    <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  
+</head>
+
+<body>
+  <!------------ Page 1: HOME ---------------->
+  
+  <div data-role="page" id = "home">
+
+      <!-- page header -->
+        <div data-role="header" data-theme="c">
+          <h2 id="Header">Hiking Trails Northwest</h2>
+          <br>
+          <h2 id="Header2">HOME PAGE</h2>
+          <!-- <img src="images/hikinglogo.png" alt="Hiking" id="hikinglogo"> -->
+          <div data-role="navbar" data-theme='b'>
+            <ul>
+                <li><a href="#add">Add Trail</a></li>
+                <li><a href="#list">List Rating</a></li>
+            </ul>
+          </div><!-- navbar -->
+
+        </div>
+  
+        <!-- page content -->
+        <div data-role="main" data-theme='a'> 
+          <div class="newFont" id="home1">
+            <img src="images/hikinglogo.png" alt="Hiking" id="hikinglogohome">
+              <h1 id="favoritehikes">My Favorite Trails</h1>
+          </div>
+        </div>
+        
+        <!-- page footer -->
+        <div data-role="footer" data-theme='a'>
+          <h4 id="footertext">For Entertainment Purpose Only</h4>
+        </div>
+
+        
+  </div>
+
+  <!------------------------------------------>
+  <!------------ Page 2: ADD  ---------------->
+   
+  <div data-role="page" id="add">
+
+    <!--  page header -->
+    <div data-role="header" data-theme='c'>
+      <h2 id="Header">Hiking Trails Northwest</h2>
+      <br>
+      <h2 id="Header2">ADD PAGE</h2>
+      <img src="images/hikinglogo.png" alt="Hiking" id="hikinglogo">
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#list">Trails and Ratings</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+    </div>
+  
+        <!-- page content -->
+        <div data-role="main" data-theme='c' class="ui-content">
+          <img src="images/hikingsign.png" alt="hiking sign" id="hikingsign">
+          <h2 id="TrailsTitle">Please share your favorite trails</h2>
+          Hiking Trail Name <br />
+          <input type="text" value="" id="trailname" />
+          Closest City <br />
+          <input type="text" value="" id="closestcity" />
+          General Comments <br />
+          <input type="text" value="" id="generalcomments" />
+      <label for="trailrating">Choose a Rating:</label>
+  <select name="trailrating" id="ratings">
+    <option value="1"><span>☆</span></option>
+    <option value="2"><span>☆</span><span>☆</span></option>
+    <option value="3"><span>☆</span><span>☆</span><span>☆</span></option>
+    <option value="4"><span>☆</span><span>☆</span><span>☆</span><span>☆</span></option>
+    <option value="5"><span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span></option>
+  </select>
+
+  <br><br>
+
+        <input type="button" value="Add" id="buttonAdd" data-inline="true" />
+        <input type="button" value="Clear" id="buttonClear" data-inline="true" />
+
+        </div>
+ 
+        <!-- page footer -->
+        <div data-role="footer" data-theme='a'>
+            <h4 id="footertext">For Entertainment Purpose Only</h4>
+          </div>
+ 
+    </div>
+
+ <!------------------------------------------->
+ <!------------  Page 3: LIST ---------------->
+
+  <div data-role="page" id="list">
+
+    <!--  page header -->
+    <div data-role="header" data-theme='c'>
+      <h2 id="Header">Hiking Trails Northwest</h2>
+      <br>
+      <h2 id="Header2">LIST PAGE</h2>
+      <img src="images/hikinglogo.png" alt="Hiking" id="hikinglogo">
+      <div data-role="navbar" data-theme='b'>
+        <ul>
+          <li><a href="#home">Home Page</a></li>
+          <li><a href="#add">Add Trail</a></li>
+        </ul>
+      </div><!-- /navbar -->
+
+  </div>
+ 
+    <!--   page content -->
+    <div data-role="content" data-theme='e'>
+      <img src="images/hikingsign.png" alt="hiking sign" id="hikingsign">
+      <h2 id="TrailsTitle">All Trails and Ratings</h2>
+    <div id="divTrailsList"></div>
+      <ul id="myul"></ul>
+      <input type="button" value="Sort By Trail Name" id="buttonSortTrail" data-inline="true" />
+      <input type="button" value="Sort By Closest City" id="buttonSortCity" data-inline="true" />
+      <input type="button" value="Sort By Comments" id="buttonSortComment" data-inline="true" />
+      <input type="button" value="Sort By Rating" id="buttonSortRating" data-inline="true" />
+    </div>
+
+ 
+        <!-- page footer -->
+        <div data-role="footer" data-theme='a'>
+            <h4 id="footertext">For Entertainment Purpose Only</h4>
+          </div>
+ 
+    </div>
+
+ <script type="text/javascript" src="script.js"></script>
+   
+</body>
+</html>
