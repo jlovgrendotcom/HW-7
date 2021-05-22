@@ -69,6 +69,7 @@ function createList() {
 
 };
 
+if (wacitymap.value == closestcity.value) {
   function createMapList() {
     
     var theList = document.getElementById("mapul");
@@ -79,10 +80,9 @@ function createList() {
         li.innerHTML =  element.Trail + ":  " + element.City+ ":  " + element.Difficulty+ ":  " + element.Rating;
         theList.appendChild(li);
     });
-  
   };
+}
 
-  
 function dynamicSort(property) {
     var sortOrder = 1;
 
