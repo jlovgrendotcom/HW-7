@@ -3,7 +3,7 @@
 <head>
     <title>Hiking Trails Northwest</title>
 
-    <link href='https://fonts.googleapis.com/css?family=canvas-print' rel='stylesheet'>
+    <!-- <link href='https://fonts.googleapis.com/css?family=canvas-print' rel='stylesheet'> -->
 
     <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
     <script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
@@ -77,6 +77,7 @@
            
            <label for="city">Closest City :</label>
            <select name="city" id="closestcity">
+             <option value="Port Angeles"><span>Port Angeles</span></option>
              <option value="Bellingham"><span>Bellingham</span></option>
              <option value="Mount Vernon"><span>Mount Vernon</span></option>
              <option value="Seattle"><span>Seattle</span></option>
@@ -188,23 +189,23 @@
  <div>
 
 
-        <img src = "map.jpg" alt = "WACityMap" usemap="#citymap" id = "map" >
-    <map name = "citymap">
+  <img src = "images/map.jpg" alt = "WACityMap" usemap="#citymap" id ="wamap" >
+  <map name = "citymap">
      
-  <area shape="circle" coords="60,126,44" alt="portangeles" href="#mapresults">
-  <area shape="circle" coords="236,40,44" alt="bellingham" href="#mapresults">
-  <area shape="circle" coords="239,83,44" alt="mount vernon" href="#mapresults">
-  <area shape="circle" coords="235,194,44" alt="seattle" href="#mapresults">
-  <area shape="circle" coords="169,264,44" alt="olympia" href="#mapresults">
-  <area shape="circle" coords="159,330,44" alt="centralia" href="#mapresults">
-  <area shape="circle" coords="182,447,44" alt="vancouver" href="#mapresults">
-  <area shape="circle" coords="510,394,44" alt="richland" href="#mapresults">
-  <area shape="circle" coords="394,334,44" alt="yakima" href="#mapresults">
-  <area shape="circle" coords="523,283,44" alt="moses-lake" href="#mapresults">
-  <area shape="circle" coords="432,241,44" alt="east-wenatchee-beach" href="#mapresults">
-  <area shape="circle" coords="481,105,44" alt="omak" href="#mapresults">
-  <area shape="circle" coords="663,68,44" alt="kettle-falls" href="#mapresults">
-  <area shape="circle" coords="733,151,44" alt="newport" href="#mapresults">
+  <area shape="circle" coords="60,126,44" alt="portangeles" value="Port Angeles" href="#mapresults">
+  <area shape="circle" coords="236,40,44" alt="bellingham" value="Bellingham" href="#mapresults">
+  <area shape="circle" coords="239,83,44" alt="mount vernon" value="Mount Vernon" href="#mapresults">
+  <area shape="circle" coords="235,194,44" alt="seattle" value="Seattle" href="#mapresults">
+  <area shape="circle" coords="169,264,44" alt="olympia" value="Olympia" href="#mapresults">
+  <area shape="circle" coords="159,330,44" alt="centralia" value="Centralia" href="#mapresults">
+  <area shape="circle" coords="182,447,44" alt="vancouver" value="Vancouver" href="#mapresults">
+  <area shape="circle" coords="510,394,44" alt="richland" value="Richland" href="#mapresults">
+  <area shape="circle" coords="394,334,44" alt="yakima" value="Yakima" href="#mapresults">
+  <area shape="circle" coords="523,283,44" alt="moses-lake" value="Moses Lake" href="#mapresults">
+  <area shape="circle" coords="432,241,44" alt="east-wenatchee-beach" value="East Wenatchee Beach" href="#mapresults">
+  <area shape="circle" coords="481,105,44" alt="omak" value="Omak" href="#mapresults">
+  <area shape="circle" coords="663,68,44" alt="kettle-falls" value="Kettle Falls" href="#mapresults">
+  <area shape="circle" coords="733,151,44" alt="newport" value="Newport" href="#mapresults">
 </map>
  </div>
  </div>
@@ -232,7 +233,8 @@
  <script type="text/javascript" src="script.js"></script>
  <div data-role="content" data-theme='e'>
       <img src="images/hikingsign.png" alt="hiking sign" id="hikingsign">
-  <input type="button" value="Show Results" id="showResults" data-inline="true" />   
+  <!-- <input type="button" value="Show Results" id="showResults" data-inline="true" />    -->
+  <ul id="mapul"></ul>
  </div>
     </div>
 
