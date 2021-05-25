@@ -1,6 +1,7 @@
 
 let trailsArray = [];
 
+
 let trailsObject = function (pTrail, pCity, pDifficulty, pRating) {
     this.Trail = pTrail;
     this.City = pCity;
@@ -43,6 +44,9 @@ document.addEventListener("DOMContentLoaded", function () {
       trailsArray.sort(dynamicSort("Rating"));
       createList();
   });
+   
+
+  
 
 //---------- page before show ------------------------------------------------------------
 
@@ -51,11 +55,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   $(document).on("pagebeforeshow", "#mapresults", function (event) { 
-    createMapList();
-    });
-
+   createMapList();
 });
-
+});
 function createList() {
     // clear list
     var theList = document.getElementById("myul");
@@ -68,19 +70,33 @@ function createList() {
     });
 
 };
-
+//  function myfunction(value,index,array){
+//     return function(obj) {
+//       return obj.City === "Seattle";
+//     }
+//   }
   function createMapList() {
-    
-    var theList = document.getElementById("mapul");
+     // clear list
+  let params = new URLSearchParams(window.location.hash);
+  console.log(window.location.hash);
+  console.log(params);
+  for (var param of params ){
+    console.log(param);
+  }
+  let city = params.get("#mapresults?City");
+  console.log(city);
+  let mapArray = trailsArray.filter((obj) => obj.City === city);
+  var theList = document.getElementById("mapul");
     theList.innerHTML = "";
-
-    trailsArray.forEach(function (element, ) {   
+    mapArray.forEach(function (element,) {   
         var li = document.createElement('li');
         li.innerHTML =  element.Trail + ":  " + element.City+ ":  " + element.Difficulty+ ":  " + element.Rating;
         theList.appendChild(li);
     });
-  };
-
+ 
+};
+ 
+  
 function dynamicSort(property) {
     var sortOrder = 1;
 
@@ -96,4 +112,5 @@ function dynamicSort(property) {
             return a[property].localeCompare(b[property]);
         }
     }
-}
+    }
+ 
