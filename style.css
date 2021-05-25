@@ -19,6 +19,7 @@
   font-size: 100px;
   font-weight: bold;
   text-align: right;
+  margin-top: -5%;
   padding-right: 10%;
   padding-top: -10%;
   color:rgb(0, 121, 26);
@@ -30,20 +31,20 @@
   color:rgb(0, 121, 26);
 }
 
+#hikinglogohome {
+  float:left;
+  width:400px;
+  height: 350px;
+  margin-top: -6%;
+  padding-right: 15%;
+  }
+
 #hikinglogo {
   float: left;
   margin-top: -4%;
   padding-left: 2%;
   width: 100px;
   height: 100px;
-  }
-
-#hikinglogohome {
-  float:left;
-  width:400px;
-  height: 350px;
-  margin-top: -14%;
-  padding-right: 15%;
   }
 
 #hikingsign {
