@@ -68,21 +68,17 @@ function createList() {
         li.innerHTML =  element.Trail + ":  " + element.City+ ":  " + element.Difficulty+ ":  " + element.Rating;
         theList.appendChild(li);
     });
-
 };
-//  function myfunction(value,index,array){
-//     return function(obj) {
-//       return obj.City === "Seattle";
-//     }
-//   }
+
   function createMapList() {
      // clear list
-  let params = new URLSearchParams(window.location.hash);
-  console.log(window.location.hash);
-  console.log(params);
-  for (var param of params ){
+    let params = new URLSearchParams(window.location.hash);
+    console.log(window.location.hash);
+    console.log(params);
+    for (var param of params ){
     console.log(param);
   }
+  
   let city = params.get("#mapresults?City");
   console.log(city);
   let mapArray = trailsArray.filter((obj) => obj.City === city);

@@ -72,10 +72,10 @@
         <div data-role="main" data-theme='c' class="ui-content">
           <img src="images/hikingsign.png" alt="hiking sign" id="hikingsign">
           <h2 id="TrailsTitle">Please share your favorite trails</h2>
-          Hiking Trail Name <br />
+          <label>Hiking Trail Name:</label>
           <input type="text" value="" id="trailname" />
            
-           <label for="city">Closest City :</label>
+           <label for="city">Closest City:</label>
            <select name="city" id="closestcity">
              <option value="Port Angeles"><span>Port Angeles</span></option>
              <option value="Bellingham"><span>Bellingham</span></option>
@@ -86,14 +86,14 @@
              <option value="Vancouver"><span>Vancouver</span></option>
              <option value="Richland"><span>Richland</span></option>
              <option value="Yakima"><span>Yakima</span></option>
-             <option value=" Moses Lake"><span> Moses Lake</span></option>
+             <option value="Moses Lake"><span>Moses Lake</span></option>
              <option value="East Wenatchee Beach"><span>East Wenatchee Beach</span></option>
              <option value="Omak"><span>Omak</span></option>
              <option value="Kettle Falls"><span>Kettle Falls</span></option>
              <option value="Newport"><span>Newport</span></option>
            </select> 
-          <label for="traildiff">Difficulty </label>
-          <select name ="traildiff" id = "difficulty"/>
+          <label for="traildiff">Difficulty:</label>
+          <select name ="traildiff" id = "difficulty">
           <option value="Easy"><span>Easy</span></option>
           <option value="Medium"><span>Medium</span></option>
           <option value="Hard"><span>Hard</span></option>
@@ -188,13 +188,13 @@
       <img src="images/hikingsign.png" alt="hiking sign" id="hikingsign">
  <div>
 
-<h2> Click on a city to find your rated trails nearby</h2>
-  <img src = "map.jpg" alt = "WACityMap" usemap="#citymap" id ="wamap" >
+ <h2 id="TrailsTitle">Click on a city to find your rated trails near that city</h2>
+  <img src = "images/map.jpg" alt = "WACityMap" usemap="#citymap" id ="wamap" >
   
   <map name = "citymap" id="wacitymap">  
   <area shape="circle" coords="60,126,44" alt="portangeles" value="Port Angeles" href="#mapresults?City=Port Angeles">
-  <area shape="circle" coords="236,40,44" alt="bellingham" value="Bellingham" href="#mapresults?City=Bellingham">
-  <area shape="circle" coords="239,83,44" alt="mount vernon" value="Mount Vernon" href="#mapresults?City=Mount Vernon">
+  <area shape="circle" coords="236,11,44" alt="bellingham" value="Bellingham" href="#mapresults?City=Bellingham">
+  <area shape="circle" coords="237,76,44" alt="mount vernon" value="Mount Vernon" href="#mapresults?City=Mount Vernon">
   <area shape="circle" coords="235,194,44" alt="seattle" id="sea" value="Seattle" href="#mapresults?City=Seattle">
   <area shape="circle" coords="169,264,44" alt="olympia" value="Olympia" href="#mapresults?City=Olympia">
   <area shape="circle" coords="159,330,44" alt="centrailia" value="Centrailia" href="#mapresults?City=Centrailia">
@@ -206,9 +206,9 @@
   <area shape="circle" coords="481,105,44" alt="omak" value="Omak" href="#mapresults?City=Omak">
   <area shape="circle" coords="663,68,44" alt="kettle-falls" value="Kettle Falls" href="#mapresults?City=Kettle Falls">
   <area shape="circle" coords="733,151,44" alt="newport" value="Newport" href="#mapresults?City=Newport">
-</map>
- </div>
- </div>
+  </map>
+  </div>
+  </div>
 </div>
 
    <!------------------------------------------->
