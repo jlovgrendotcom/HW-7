@@ -109,4 +109,20 @@ function dynamicSort(property) {
         }
     }
     }
+function searchTrail() {
+    var flag = false;
+    trailName = document.getElementById("DeleteTextBox").value;
+    for(let i =0; i <trailsArray.length; i++){
+      if( trailName === trailsArray[i].Trail){
+        trailsArray.splice(i,1);
+        console.log(trailsArray);
+        createList();
+        alert("Trail deleted.");
+        break
+        } else {
+            alert("No such trail was found. Make sure your spelling is correct.");
+        }
+    }
+    
+}
  
