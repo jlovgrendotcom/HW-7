@@ -154,7 +154,13 @@
       <input type="button" value="Sort By Difficulty" id="buttonSortDifficulty" data-inline="true" />
       <input type="button" value="Sort By Rating" id="buttonSortRating" data-inline="true" />
     </div>
-
+      
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" id="DeleteTextBox"placeholder="Search.." name="search">
+      <input type="button"  onclick="searchTrail()" value="Delete Trail"/>
+    </form>
+  </div>
  
         <!-- page footer -->
         <div data-role="footer" data-theme='a'>
